@@ -1,0 +1,6 @@
+env
+__pycache__
+utils/__pycache__
+vectorstore
+models/**.gguf
+download_audio
