@@ -3,9 +3,8 @@
 A question-answering chatbot for any YouTube video using Local Llama2 & Retrival Augmented 
 Generation
 
-## Demo
+https://github.com/SRDdev/YouTube-Llama/assets/84516626/aa463492-c3c5-4b32-90ec-5e9ea48cc3eb
 
-Watch the demo video: [YouTube Llama Demo](assets/YouTube%20Llama%20Demo.mp4)
 
 ## Table of Contents
 
@@ -116,7 +115,4 @@ This project is licensed under the [MIT License](LICENSE.md) - see the [LICENSE.
 
 We would like to express our gratitude to the creators of Local Llama2 for providing a powerful tool for question-answering tasks.
 
-## Contact
-
-For any inquiries or feedback, please contact [Your Name] at [your.email@example.com].
 
