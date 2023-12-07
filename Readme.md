@@ -92,7 +92,7 @@ How to use 🦙 YouTube Llama:
 
 3. Input questions related to a specific YouTube video
 
-4. Receive answers based on the content of the video as well as general purpose information.
+4. Receive answers based on the content of the video as well as general-purpose information.
 
 ## Contributing
 
@@ -108,14 +108,9 @@ We welcome contributions! Follow these steps to contribute to the project:
 
 5. **Open a pull request.**
 
-Refer to the [CONTRIBUTING.md](CONTRIBUTING.md) file for more details.
-
 ## License
 
 This project is licensed under the Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0) license.) - see the [LICENSE.md](LICENSE.md) file for details.
 
-## Acknowledgments
-
-We would like to express our gratitude to the creators of Local Llama2 for providing a powerful tool for question-answering tasks.
 
 
