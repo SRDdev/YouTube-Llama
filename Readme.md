@@ -1,5 +1,8 @@
 # 🦙 YouTube Llama
 
+![llama_image](https://github.com/SRDdev/YouTube-Llama/assets/84516626/2e5e3c73-6224-492f-8884-a1df9601ec5c)
+
+
 A question-answering chatbot for any YouTube video using Local Llama2 & Retrival Augmented 
 Generation
 
