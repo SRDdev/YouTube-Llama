@@ -112,7 +112,7 @@ Refer to the [CONTRIBUTING.md](CONTRIBUTING.md) file for more details.
 
 ## License
 
-This project is licensed under the [MIT License](LICENSE.md) - see the [LICENSE.md](LICENSE.md) file for details.
+This project is licensed under the Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0) license.) - see the [LICENSE.md](LICENSE.md) file for details.
 
 ## Acknowledgments
 
