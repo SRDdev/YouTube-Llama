@@ -6,8 +6,7 @@
 A question-answering chatbot for any YouTube video using Local Llama2 & Retrival Augmented 
 Generation
 
-https://github.com/SRDdev/YouTube-Llama/assets/84516626/aa463492-c3c5-4b32-90ec-5e9ea48cc3eb
-
+https://github.com/SRDdev/YouTube-Llama/assets/84516626/678690ac-bffa-41ea-94da-9d16b1b82a30
 
 ## Table of Contents
 
