@@ -23,7 +23,7 @@ def download_youtube_audio(video_url, output_path='./download_audio/'):
             print("Error: No audio stream available for the given video.")
             return None
         audio_file_path = f"{output_path}{title}.mp4"
-        audio_stream.download(output_path)
+        audio_stream.download(output_path, f"{title}.mp4")
         print(f"Audio downloaded successfully to {audio_file_path}")
         clip = mp.AudioFileClip(audio_file_path)
         wav_output_path = f"{output_path}audio.wav"
