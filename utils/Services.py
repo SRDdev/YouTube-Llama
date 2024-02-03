@@ -13,7 +13,7 @@ def Services(video_url):
         str: The path to the saved text file.
     """
 
-    wav_path, title = download_youtube_audio(video_url)
-    text_path = recognize_and_save_speech(wav_path, title)
+    wav_path, title , publish_time = download_youtube_audio(video_url)
+    text_path = recognize_and_save_speech(wav_path, title, publish_time)
 
     return text_path

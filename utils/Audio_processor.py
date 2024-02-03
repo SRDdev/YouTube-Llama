@@ -2,7 +2,7 @@ import os
 import torch
 from transformers import pipeline
 
-def recognize_and_save_speech(input_audio_path, output_filename):
+def recognize_and_save_speech(input_audio_path, output_filename, publish_time):
     """
     Recognize speech from an audio file and save the result to a text file.
 
@@ -25,11 +25,12 @@ def recognize_and_save_speech(input_audio_path, output_filename):
         os.makedirs(output_text_directory)
     pipe = pipeline(
         "automatic-speech-recognition",
-        model="openai/whisper-tiny",
-        chunk_length_s=30,  # Process audio in 30-second chunks
+        model="openai/whisper-base.en",
+        chunk_length_s=60,  # Process audio in 30-second chunks
         device=device,
     )
     prediction = pipe(input_audio_path, batch_size=8)["text"]
     with open(output_text_file_path, 'w') as file:
+        file.write(f"Video Publish Time: {publish_time}\n")
         file.write(prediction)
     return output_text_file_path

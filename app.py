@@ -10,16 +10,17 @@ from langchain.llms import LlamaCpp
 from langchain.chains import RetrievalQA
 from langchain.callbacks.manager import CallbackManager
 from langchain.callbacks.streaming_stdout import StreamingStdOutCallbackHandler
-
+import datetime
 # Constants
 DB_FAISS_PATH = 'vectorstore/db_faiss'
+current_time = datetime.datetime.now()
+# Updated Prompt Template
+template = f"""Use the following pieces of information to answer the user's question.
+If you don't know the answer or if the data might be outdated, just say that you don't know or acknowledge the potential time lapse, don't try to make up an answer.
 
-# Prompt Template
-template = """Use the following pieces of information to answer the user's question.
-If you don't know the answer, just say that you don't know, don't try to make up an answer.
-
-Context: {context}
-Question: {question}
+Current Time : {current_time}
+Context: {{context}}
+Question: {{question}}
 
 Only return the helpful answer below and nothing else.
 Helpful answer:
@@ -27,7 +28,7 @@ Helpful answer:
 
 # Functions
 
-def set_custom_prompt():
+def set_custom_prompt():     
     """
     Creates a custom prompt template for the QA model.
 
@@ -53,7 +54,7 @@ def retrieval_qa_chain(llm, prompt, db):
                                            chain_type='stuff',
                                            retriever=db.as_retriever(search_type="similarity_score_threshold", search_kwargs={"score_threshold": 0.3, "k": 4}),
                                            return_source_documents=True,
-                                           chain_type_kwargs={'prompt': prompt}
+                                           chain_type_kwargs={'prompt': prompt},
                                            )
     return qa_chain
     
@@ -117,7 +118,7 @@ st.title("🦙YouTube Llama")
 st.markdown("Your own youtube video assistant. Ask question about anything, understand everything.")
 st.caption("Created : Shreyas Dixit")
 st.sidebar.title("HyperParameters")
-selected_model = st.sidebar.radio("Llama Models", ["llama-2-7b-chat.Q2_K", "llama-2-7b-chat.Q4_K_M"])
+selected_model = st.sidebar.radio("Llama Models", ["mistral-7b-instruct-v0.2.Q3_K_S","llama-2-7b-chat.Q2_K", "llama-2-7b-chat.Q4_K_M"])
 
 # Custom Youtube Video
 st.sidebar.markdown("#")
